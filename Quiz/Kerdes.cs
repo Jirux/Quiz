@@ -9,6 +9,8 @@ public class Kerdes
     public string _kerdes { get; }
     public List<Valasz> Valaszok { get; }
 
+    public int TanuloiValasz { get; set; } = -1;
+
     public Kerdes(Tantargy tantargy, string temakor, string kerdes, List<Valasz> valaszok)
     {
         Tantargy = tantargy;

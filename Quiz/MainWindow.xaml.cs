@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Media;
 
 namespace Quiz
 {
@@ -57,6 +60,8 @@ namespace Quiz
             kerdes3Label.Content = jelenlegiKerdes.Valaszok[2].Szoveg;
             kerdes4Label.Content = jelenlegiKerdes.Valaszok[3].Szoveg;
             
+            LabelSzinezes(jelenlegiKerdes.TanuloiValasz, Brushes.Gray);
+            
             // gombok kezelése
             if (kerdesIndex == 0)
                 elozoButton.IsEnabled = false;
@@ -67,6 +72,14 @@ namespace Quiz
                 kovetkezoButton.IsEnabled = false;
             else
                 kovetkezoButton.IsEnabled = true;
+        }
+
+        private void LabelSzinezes(int index, Brush color)
+        {
+            List<Label> labels = new List<Label> { kerdes1Label, kerdes2Label, kerdes3Label, kerdes4Label };
+            labels.ForEach(l => l.Background = Brushes.White);
+            if (index != -1)
+                labels[index].Background = color;
         }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
@@ -99,7 +112,9 @@ namespace Quiz
         {
             tantargyBox.IsEnabled = true;
             temakorBox.IsEnabled = true;
+            elozoButton.IsEnabled = false;
             kiertekelesButton.IsEnabled = false;
+            kovetkezoButton.IsEnabled = false;
         }
 
         private void KovetkezoButton_Click(object sender, RoutedEventArgs e)
@@ -117,6 +132,30 @@ namespace Quiz
                 .Select(k => k.Temakor)
                 .ToList()
                 .ForEach(temakor => temakorBox.Items.Add(temakor));
+        }
+
+        private void Kerdes1Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            jelenlegiKerdes.TanuloiValasz = 0;
+            LabelSzinezes(0, Brushes.Gray);
+        }
+
+        private void Kerdes2Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            jelenlegiKerdes.TanuloiValasz = 1;
+            LabelSzinezes(1, Brushes.Gray);
+        }
+
+        private void Kerdes3Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            jelenlegiKerdes.TanuloiValasz = 2;
+            LabelSzinezes(2, Brushes.Gray);
+        }
+
+        private void Kerdes4Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            jelenlegiKerdes.TanuloiValasz = 3;
+            LabelSzinezes(3, Brushes.Gray);
         }
     }
 }
