@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Quiz;
 
@@ -9,6 +10,15 @@ public class Tantargy
     public static readonly Tantargy Irodalom = new Tantargy("Irodalom", "Ady munkássága", "Ómagyar mária siralom");
     public static readonly Tantargy Angol = new Tantargy("Angol", "Past simple", "Present continuous");
     public static readonly Tantargy Informatika = new Tantargy("Informatika", "Szövegszerkesztés", "Weboldalkészítés");
+
+    public static List<Tantargy> OsszesTantargy = new List<Tantargy>
+    {
+        Matematika,
+        Tortenelem,
+        Irodalom,
+        Angol,
+        Informatika
+    };
     
     private string Nev { get; }
     private string[] Temakorok { get; }
@@ -21,20 +31,6 @@ public class Tantargy
 
     public static Tantargy Parse(string value)
     {
-        switch (value)
-        {
-            case "Matematika":
-                return Matematika;
-            case "Történelem":
-                return Tortenelem;
-            case "Irodalom":
-                return Irodalom;
-            case "Angol":
-                return Angol;
-            case "Informatika":
-                return Informatika;
-            default:
-                throw new ArgumentException("Nem létező tantárgy");
-        }
+        return OsszesTantargy.Find(t => t.Nev == value);
     }
 }
