@@ -11,8 +11,7 @@
         <ComboBox x:Name="tantargyBox" HorizontalAlignment="Left" Margin="118,14,0,0" VerticalAlignment="Top" Width="120"
                   SelectionChanged="TantargyBox_SelectChanged"/>
         <Label x:Name="temakorLabel" Content="Válassz témakört:" HorizontalAlignment="Left" Margin="243,10,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="temakorBox" HorizontalAlignment="Left" Margin="344,14,0,0" VerticalAlignment="Top" Width="120"
-                  SelectionChanged="TemaBox_SelectChanged"/>
+        <ComboBox x:Name="temakorBox" HorizontalAlignment="Left" Margin="344,14,0,0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="startButton" Content="Teszt indítása" HorizontalAlignment="Left" Margin="478,15,0,0" VerticalAlignment="Top" Width="98"
                 Click="StartButton_Click" />
         <Rectangle HorizontalAlignment="Center" Height="273" Margin="0,41,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="600" Fill="#7F47CEE0"/>
