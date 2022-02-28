@@ -1,0 +1,23 @@
+﻿Tantargy;Temakor;Kerdes;HelyesIndex;Valasz1;Valasz2;Valasz3;Valasz4
+Irodalom;Ady munkássága;Mikor született Ady Endre??;1;1877;2073;722;1783
+Irodalom;Ady munkássága;Ki volt Ady házastársa?;2;Pásztor Mária;Boncza Berta;Babits Mihály;Diósyné Brüll Adél
+Irodalom;Ómagyar Mária-siralom;Mikor íródott?;3;23.sz;most;16.sz;13.sz
+Irodalom;Ómagyar Mária-siralom;Mikor került magyar állami tulajodnba?;1;tegnap;1666;2002;1982
+Matematika;Gyökvonás;Hogy mondjuk másképp, hogy gyökvonás?;1;függvény;logaritmus;hatvány;kitevő
+Matematika;Gyökvonás;N hánynál nagyobb pozitív szám?;0;1;2;0;-1
+Matematika;Hatványozás;Az a hanyadik hatványát nem értelmezzük?;0;0;1;2;3
+Matematika;Hatványozás;A p q prímeknek milyeneknek kell lenniük?;0;relatív;páratlan;páros;igen
+Történelem;Török hódoltság;Mikortól kezdődött a török hódoltság?;3;1542;1543;1540;1541
+Történelem;Török hódoltság;Meddig tartott a török hódoltság?;1;1689;1686;1687;1666
+Történelem;II. világháború;Mikor tört ki a II. világháború?;2;1938;1937;1939;1936
+Történelem;II. világháború;Mikor fejeződött be a II. világháború?;1;1944;1945;1943;1946
+Történelem;Hidegháború;Mikortól kezdődött a hidegháború?;1;1945;1947;1946;1948
+Történelem;Hidegháború;Mikor fejeződött be a hidegháború?;2;1989;1992;1991;1987
+Angol;Past simple;Melyik a helyes?;1;they was;they were;he were;he did
+Angol;Past simple;Melyik a helytelen?;2;they were,they did;they were;he doid 
+Angol;Present continuous;Melyik a helyes?;0;they are;they were;they did; he were
+Angol;Present continuous;Melyik a helytelen?;2;they are; he is; they were; she is
+Informatika;Szövegszerkesztés;Melyik nem tartozik a szövegszerkesztők alapfeladatai közé?;1;Dokumentum nyomtatása;Szöveg begépelése;Dokumentum mentése;Kép beillesztése a dokumentumba
+Informatika;Szövegszerkesztés;Mi a legkisebb szövegegység?;1;Bekezdés;Karakter;Szó;Mondat
+Informatika;Weboldalkészítés;Mit rövidít a HTML?;3;Hát Nem Tudom Lol;-;Hyper Transfer Metalanguage;Hyper Text Markup Language
+Informatika;Weboldalkészítés;Mi adja egy weboldal funkcionalitását?;2;a gyors net;WebAssembly;JavaScript;TypeScript
