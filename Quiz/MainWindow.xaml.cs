@@ -71,6 +71,8 @@ namespace Quiz
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
+            tantargyBox.IsEnabled = false;
+            temakorBox.IsEnabled = false;
             kiertekelesButton.IsEnabled = true;
 
             jelenlegiKerdessor.Clear();
@@ -95,9 +97,9 @@ namespace Quiz
 
         private void KiertekelesButton_Click(object sender, RoutedEventArgs e)
         {
-            elozoButton.IsEnabled = false;
+            tantargyBox.IsEnabled = true;
+            temakorBox.IsEnabled = true;
             kiertekelesButton.IsEnabled = false;
-            kovetkezoButton.IsEnabled = false;
         }
 
         private void KovetkezoButton_Click(object sender, RoutedEventArgs e)
