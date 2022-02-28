@@ -4,10 +4,10 @@ namespace Quiz;
 
 public class Kerdes
 {
-    private Tantargy Tantargy { get; }
-    private string Temakor { get; }
-    private string _kerdes { get; }
-    private List<Valasz> Valaszok { get; }
+    public Tantargy Tantargy { get; }
+    public string Temakor { get; }
+    public string _kerdes { get; }
+    public List<Valasz> Valaszok { get; }
 
     public Kerdes(Tantargy tantargy, string temakor, string kerdes, List<Valasz> valaszok)
     {

@@ -33,4 +33,9 @@ public class Tantargy
     {
         return OsszesTantargy.Find(t => t.Nev == value);
     }
+
+    public override string ToString()
+    {
+        return Nev;
+    }
 }
