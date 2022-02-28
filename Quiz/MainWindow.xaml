@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Quiz"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Tantárgyi kvíz" Height="415" Width="600">
     <Grid>
-
+        <Label x:Name="tantargyLabel" Content="Válassz tantárgyat:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="tantargyBox" HorizontalAlignment="Left" Margin="118,14,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="temakorLabel" Content="Válassz témakört:" HorizontalAlignment="Left" Margin="243,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="344,14,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="startButton" Content="Teszt indítása" HorizontalAlignment="Left" Margin="478,15,0,0" VerticalAlignment="Top" Width="98"/>
+        <Rectangle HorizontalAlignment="Center" Height="273" Margin="0,41,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="600" Fill="#7F47CEE0"/>
+        <Label x:Name="kerdesLabel" Content="" HorizontalAlignment="Center" Margin="0,52,0,0" VerticalAlignment="Top" Width="565"/>
+        <Button x:Name="elozoButton" Content="Előző" HorizontalAlignment="Left" Margin="61,329,0,0" VerticalAlignment="Top" Height="34" Width="117"/>
+        <Button x:Name="kiertekelesButton" Content="Kiértékelés" HorizontalAlignment="Left" Margin="236,328,0,0" VerticalAlignment="Top" Height="35" Width="116"/>
+        <Button x:Name="kovetkezoButton" Content="Következő" HorizontalAlignment="Left" Margin="404,329,0,0" VerticalAlignment="Top" Height="35" Width="117"/>
+        <Rectangle HorizontalAlignment="Left" Height="90" Margin="10,100,0,0" Stroke="Blue" VerticalAlignment="Top" Width="282" Fill="White"/>
+        <Label x:Name="kerdes1Label" HorizontalAlignment="Left" Margin="17,110,0,0" VerticalAlignment="Top" Height="68" Width="268" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="90" Margin="292,100,0,0" Stroke="Blue" VerticalAlignment="Top" Width="282" Fill="White"/>
+        <Label x:Name="kerdes2Label" HorizontalAlignment="Left" Margin="300,111,0,0" VerticalAlignment="Top" Height="68" Width="268" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="90" Margin="10,190,0,0" Stroke="Blue" VerticalAlignment="Top" Width="282" Fill="White"/>
+        <Label x:Name="kerdes3Label" HorizontalAlignment="Left" Margin="17,201,0,0" VerticalAlignment="Top" Height="68" Width="268" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="90" Margin="292,190,0,0" Stroke="Blue" VerticalAlignment="Top" Width="282" Fill="White"/>
+        <Label x:Name="kerdes4Label" HorizontalAlignment="Left" Margin="300,201,0,0" VerticalAlignment="Top" Height="68" Width="268" FontWeight="Bold"/>
     </Grid>
 </Window>
