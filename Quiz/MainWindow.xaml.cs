@@ -86,17 +86,21 @@ namespace Quiz
         {
             tantargyBox.IsEnabled = false;
             temakorBox.IsEnabled = false;
+            startButton.IsEnabled = false;
             kiertekelesButton.IsEnabled = true;
 
             jelenlegiKerdessor.Clear();
-            //nincs választott témakör, minden témakör benne lesz a kérdéssorban
+            // tanulói válaszok törlése
+            osszesKerdes.ForEach(k => k.TanuloiValasz = -1);
+            // nincs választott témakör, minden témakör benne lesz a kérdéssorban
             if (temakorBox.SelectedItem == null)
             {
                 osszesKerdes.FindAll(k => k.Tantargy == jelenlegiTantargy).ForEach(k => jelenlegiKerdessor.Add(k));
             }
+            // csak a választott témakör
             else
             {
-                osszesKerdes.FindAll(k => k.Tantargy == jelenlegiTantargy && k.Temakor == temakorBox.SelectedItem).ForEach(k => jelenlegiKerdessor.Add(k));
+                osszesKerdes.FindAll(k => k.Tantargy == jelenlegiTantargy && k.Temakor == (string)temakorBox.SelectedItem).ForEach(k => jelenlegiKerdessor.Add(k));
             }
             // max 10 kérdés
             jelenlegiKerdessor = jelenlegiKerdessor.Take(10).ToList();
@@ -112,9 +116,19 @@ namespace Quiz
         {
             tantargyBox.IsEnabled = true;
             temakorBox.IsEnabled = true;
+            startButton.IsEnabled = true;
             elozoButton.IsEnabled = false;
             kiertekelesButton.IsEnabled = false;
             kovetkezoButton.IsEnabled = false;
+
+            int pontszam = 0;
+            foreach (Kerdes kerdes in jelenlegiKerdessor)
+            {
+                if (kerdes.TanuloiValasz != -1 && kerdes.Valaszok[kerdes.TanuloiValasz].Helyes)
+                    pontszam++;
+            }
+
+            MessageBox.Show("Eredmény:\n" + pontszam + " / " + jelenlegiKerdessor.Count, "Értékelés");
         }
 
         private void KovetkezoButton_Click(object sender, RoutedEventArgs e)
